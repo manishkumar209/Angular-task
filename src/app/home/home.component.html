@@ -1,0 +1,46 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-dark">
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01"
+    aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+    <a class="navbar-brand text-white">GitHub Image Task</a>
+  </div>
+</nav>
+<div class="container-fluid">
+  <div class="main-box">
+    <div class="col-md-12">
+      <h3 class="head-text">Users</h3>
+    </div>
+    <div class="col-md-12">
+      <div class="row head-text">
+        <div class="col-md-6">
+          <div class="row">
+            <p>All Users<span class="n_project">{{total_user}}</span> </p>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <input class="form-control col-md-6 pull-right" type="text" [(ngModel)]="searchFilter.login"
+            placeholder="Search by Name" style="margin-left: 10px;">
+        </div>
+      </div>
+    </div>
+    <div class="col-md-12">
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>User Name</th>
+            <th>Type</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let user of userList | filterBy : searchFilter">
+            <td>{{user.id}}</td>
+            <td><a routerLink="/project/{{user.login}}">{{user.login}}</a></td>
+            <td>{{user.type}}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>

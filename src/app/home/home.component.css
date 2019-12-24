@@ -1,0 +1,38 @@
+.main-box{
+    padding: 20px;
+}
+.head-text{
+    padding: 15px 0;
+    border-bottom: 1px solid #cccccc;
+    margin: 0;
+
+}
+.n_project{
+    background: #ccc;
+    border-radius: 20px;
+    padding: 3px 5px;
+    font-size: 12px;
+    margin-left: 6px;
+}
+.b-bottom{
+    border-bottom: 1px solid #cccccc;
+}
+.p_list{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+.p_list li{
+    padding: 15px 0;
+    border-bottom: 1px solid #e6e5e5;
+}
+.list_title{
+    background: #fbe3e7;
+    padding: 10px 15px;
+    border-radius: 5px;
+    width: 40px;
+    display: inline-block;
+}
+.list_name{
+    margin-left: 10px;
+}
